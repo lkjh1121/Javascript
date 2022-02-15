@@ -37,12 +37,15 @@
             city.append('<li><i>제주도</i></li>');
             city.prepend('<li><i>서울특별시</i></li>');
 
-            city.find('ol > li:eq(1)').appendTo('.city > li:eq(1) > ol');
-            city.find('ol > li:eq(2)').prependTo('.city > li:eq(5) > ol');
-            city.find('ol > li:eq(4)').prependTo('.city > li:eq(1) > ol');
-            city.find('ol > li:eq(3)').prependTo('.city > li:eq(2) > ol');
-            city.find('ol > li:eq(4)').prependTo('.city > li:eq(3) > ol');
-            city.find('ol > li:eq(1)').prependTo('.city > li:eq(0) > ol');
+            
+
+            //city.find('ol > li:eq(1)').appendTo('.city > li:eq(1) > ol');
+            //city.find('ol > li:eq(2)').prependTo('.city > li:eq(5) > ol');
+            //city.find('ol > li:eq(4)').prependTo('.city > li:eq(1) > ol');
+            //city.find('ol > li:eq(3)').prependTo('.city > li:eq(2) > ol');
+            //city.find('ol > li:eq(4)').prependTo('.city > li:eq(3) > ol');
+
+
         });
     </script>
 </head>
@@ -78,19 +81,19 @@
             <li><i>경기도</i><ol></ol></li>
             <li><i>충청도</i><ol></ol></li>
             <li><i>강원도</i><ol></ol></li>
-            <li>
-                <i>경상도</i>
-                <ol>
-                    <li>창원</li>
-                    <li>수원</li>
-                    <li>목포</li>
-                    <li>부여</li>
-                    <li>원주</li>
-                    <li>파주</li>
-                </ol>
-            </li>
+            <li><i>경상도</i><ol></ol></li>
             <li><i>전라도</i><ol></ol></li>
         </ul>
+
+        <div>
+            <li>창원</li>
+            <li>수원</li>
+            <li>목포</li>
+            <li>부여</li>
+            <li>원주</li>
+            <li>파주</li>
+        </div>
+
     </article>
 
 </body>
