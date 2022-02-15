@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.슬라이더 애니매이션</title>
+    <style>
+
+        section {
+            position: relative;
+            width: 280px;
+            height: 390px;
+            border: 1px solid red;
+            margin: 400px auto;
+            overflow: hidden;
+        }
+        
+        section > div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        
+        section > div:nth-child(1) {left: 0; top: 0;}
+        
+        section > div:nth-child(2) {left: 0; top: 100%;}
+        
+        section > div:nth-child(3) {left: 0; top: 200%;}
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <h3>3.슬라이더 애니매이션</h3>
+
+    <section>
+        <div><img src="./img/1.jpg" alt="1"></div>
+        <div><img src="./img/2.jpg" alt="2"></div>
+        <div><img src="./img/3.jpg" alt="3"></div>
+    </section>
+    
+
+
+
+</body>
+</html>
