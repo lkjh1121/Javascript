@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.데이터 처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+            
+            $('button').click(function(){
+
+                // 데이터 요청하기(Ajax 통신) 기본모양
+                $.ajax({
+                    url: 'http://chhak.or.kr/data/users.json', // 데이터 요청서버 주소 // <= 제이슨 파일 주소 서버로전송후 sucess으로 전송
+                    type: 'get',                              // 데이터 요청 방식(GET/POST)
+                    dataType: 'json',                         // 서버로 전달받는 데이터의 형식
+                    success: function(data){                  // 서버로부터 데이터를 전달받기 위한 핸들러(함수)
+                        // 요청한 데이터를 수신 핸들러
+                        
+
+                        for(let user of data.users) {
+                            $('table').append('<tr></tr>');
+                            $('table tr:last-child').append('<td>'+user.uid+'</td>');
+                            $('table tr:last-child').append('<td>'+user.name+'</td>');
+                            $('table tr:last-child').append('<td>'+user.hp+'</td>');
+                            $('table tr:last-child').append('<td>'+user.age+'</td>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>2.데이터 처리</h3>
+    
+    <button>데이터 요청하기</button>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>나이</th>
+        </tr>
+    </table>
+</body>
+</html>
